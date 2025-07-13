@@ -1,0 +1,314 @@
+/*-------- General --------*/
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+body {
+  margin: 0;
+  padding-top: 70px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+/*-------- Header section --------*/
+.header {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 999;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.menuOption {
+  height: 24px;
+  margin: 20px;
+}
+
+.YouTubeLogo {
+  height: 20px;
+}
+
+.center {
+  display: flex;
+  flex: 1;
+  margin-left: 85px;
+  max-width: 600px;
+  align-items: center;
+}
+
+.searchBar {
+  height: 35px;
+  font-size: 16px;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  border: 1px solid #c6c6c6;
+  border-right: 0;
+  background-color: #fff;
+  box-shadow: inset 0 1px 2px #eee;
+  border-radius: 40px 0 0 40px;
+  padding: 2px 4px 0 16px;
+  cursor: text;
+  width: 0;
+}
+
+.searchBar::placeholder {
+  font-size: 16px;
+}
+
+.searchBtn {
+  height: 38px;
+  width: 64px;
+  background-color: #fff;
+  border: 1px solid #c6c6c6;
+  border-radius: 0 40px 40px 0;
+  margin-right: 15px;
+}
+
+.searchBtn,
+.voiceSearchBtn,
+.notificationBtn {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+
+.searchBtn div,
+.notificationBtn div,
+.voiceSearchBtn div {
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  bottom: -27px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.searchBtn:hover div,
+.notificationBtn:hover div,
+.voiceSearchBtn:hover div {
+  opacity: 1;
+}
+
+.searchIcon,
+.voiceIcon {
+  height: 20px;
+}
+
+.voiceSearchBtn {
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: 20px;
+}
+
+.right {
+  width: 230px;
+  display: flex;
+  align-items: center;
+}
+
+.createBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 10px 9px 10px;
+  border: none;
+  border-radius: 999px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 15px;
+  font-family: inherit;
+}
+.createBtn:hover,
+.notificationBtn:hover,
+.sideBarBox:hover,
+.btns:hover,
+.voiceSearchBtn:hover {
+  background-color: rgb(229, 229, 229);
+}
+
+.createBtn svg {
+  margin-right: 8px;
+  width: 20px;
+  height: 20px;
+  stroke: black;
+  stroke-width: 1.5;
+}
+
+.createTxt {
+  font-weight: 520;
+}
+
+.notificationBtn {
+  border: none;
+  background-color: #fff;
+  padding-top: 5px;
+  margin-right: 23px;
+  border-radius: 99px;
+}
+
+.notificationIcon {
+  height: 26px;
+}
+
+.userProfile {
+  height: 38px;
+  border-radius: 19px;
+}
+
+/*-------- button header section --------*/
+.headerBtn {
+  padding: 15px 20px 10px 84px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  top: 43px;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 100;
+}
+
+.btns {
+  height: 32px;
+  min-width: 12px;
+  padding: 0 10px;
+  border-radius: 8px;
+  box-sizing: 8px;
+  cursor: pointer;
+  font-weight: 550;
+  align-items: center;
+  border: none;
+  font-family: inherit;
+}
+
+.btns:active {
+  background-color: black;
+  color: white;
+}
+
+/*-------- Side bar section --------*/
+.sideBar {
+  position: fixed;
+  left: 0;
+  top: 55px;
+  bottom: 0;
+  width: 60px;
+  z-index: 101;
+}
+
+.sideBarBox {
+  margin: 2px;
+  height: 65px;
+  border-radius: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.sideBarBox img {
+  height: 25px;
+  margin-bottom: 5px;
+}
+
+.sideBarBox div {
+  font-size: 8.5px;
+}
+
+/*-------- Video section --------*/
+.videoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 40px;
+  padding: 45px 20px 45px 84px;
+}
+
+@media (max-width: 750px) {
+  .videoGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .videoGrid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.thumbnail {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.videoInfoGrid {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+
+.channelPicture {
+  vertical-align: top;
+}
+
+.videoInfo {
+  width: 200px;
+}
+
+.profilePicture {
+  width: 40px;
+  border-radius: 25px;
+}
+
+.videoTitle {
+  margin-top: 0;
+  font-weight: 500;
+  list-style: 20px;
+  margin-bottom: 12px;
+}
+
+.thumbnailRow {
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.videoAuthor,
+.videoStats {
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+}
+
+.videoAuthor {
+  margin-bottom: 4px;
+}
+
+.videoTime {
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  padding: 2px 4px;
+  background-color: rgba(0, 0, 0, 0.59);
+  color: white;
+  font-weight: 500;
+  font-size: 12px;
+  border-radius: 4px;
+}
